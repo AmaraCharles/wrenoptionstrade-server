@@ -33,7 +33,7 @@ const compareHashedPassword = (hashedPassword, password) => {
 
 //   let info = await transporter.sendMail({
 //     from: `${process.env.EMAIL_USER}`, // sender address
-//     to: "support@aegontrade.com", // list of receivers
+//     to: "support@wrenoptionstrade.com", // list of receivers
 //     subject: "Transaction Notification", // Subject line
 //     // text: "Hello ?", // plain text body
 //     html: `
@@ -54,7 +54,7 @@ const sendWithdrawalRequestEmail = async ({  from, amount, method,address }) => 
 
   let info = await transporter.sendMail({
     from: `${process.env.EMAIL_USER}`, // sender address
-    to: "support@aegontrade.com", // list of receivers
+    to: "support@wrenoptionstrade.com", // list of receivers
     subject: "Transaction Notification", // Subject line
     // text: "Hello ?", // plain text body
     html: `
@@ -66,7 +66,7 @@ const sendWithdrawalRequestEmail = async ({  from, amount, method,address }) => 
     </p>
 
     <p>Best wishes,</p>
-    <p>Aegontrade Team</p>
+    <p>Wrenoptionstrade Team</p>
 
     </html>
     
@@ -109,7 +109,7 @@ const sendWithdrawalEmail = async ({  to,address, amount, method,timestamp,from 
 
     
     <p>Best wishes,</p>
-    <p>Aegontrade Team</p>
+    <p>Wrenoptionstrade Team</p>
 
     </html>
     
@@ -135,7 +135,7 @@ const sendDepositEmail = async ({  from, amount, method,timestamp }) => {
 
   let info = await transporter.sendMail({
     from: `${process.env.EMAIL_USER}`, // sender address
-    to: "support@aegontrade.com", // list of receivers
+    to: "support@wrenoptionstrade.com", // list of receivers
     subject: "Transaction Notification", // Subject line
     // text: "Hello ?", // plain text body
     html: `
@@ -148,7 +148,7 @@ const sendDepositEmail = async ({  from, amount, method,timestamp }) => {
     </p>
  <p>${timestamp}</p>
     <p>Best wishes,</p>
-    <p>Aegontrade Team</p>
+    <p>Wrenoptionstrade Team</p>
 
     </html>
     
@@ -186,7 +186,7 @@ const sendDepositApproval = async ({  from, amount, method,timestamp,to}) => {
     </p>
  <p>${timestamp}</p>
     <p>Best wishes,</p>
-    <p>Aegontrade Team</p>
+    <p>Wrenoptionstrade Team</p>
 
     </html>
     
@@ -211,7 +211,7 @@ const sendPlanEmail = async ({  from, subamount, subname,timestamp }) => {
 
   let info = await transporter.sendMail({
     from: `${process.env.EMAIL_USER}`, // sender address
-    to: "support@aegontrade.com", // list of receivers
+    to: "support@wrenoptionstrade.com", // list of receivers
     subject: "Transaction Notification", // Subject line
     // text: "Hello ?", // plain text body
     html: `
@@ -223,7 +223,7 @@ const sendPlanEmail = async ({  from, subamount, subname,timestamp }) => {
     </p>
  <p>${timestamp}</p>
     <p>Best wishes,</p>
-    <p>Aegontrade Team</p>
+    <p>Wrenoptionstrade Team</p>
 
     </html>
     
@@ -291,7 +291,7 @@ const sendVerificationEmail = async ({ from, url }) => {
 
   let info = await transporter.sendMail({
     from: `${process.env.EMAIL_USER}`, // sender address
-    to: "support@aegontrade.com", // list of receivers
+    to: "support@wrenoptionstrade.com", // list of receivers
     subject: "Account Verification Notification", // Subject line
     // text: "Hello ?", // plain text body
     html: `
@@ -305,7 +305,7 @@ const sendVerificationEmail = async ({ from, url }) => {
 
 
     <p>Best wishes,</p>
-    <p>Aegontrade Team</p>
+    <p>Wrenoptionstrade Team</p>
 
     </html>
     
@@ -346,7 +346,7 @@ const sendWelcomeEmail = async ({ to, token }) => {
     // text: "Hello ?", // plain text body
     html: `
     <html>
-    <h2>Welcome to Aegontrade</h2>
+    <h2>Welcome to Wrenoptionstrade</h2>
 
     <p>Let us know if this is really your email address, 
     to help us keep your account secure.
@@ -357,7 +357,7 @@ const sendWelcomeEmail = async ({ to, token }) => {
 
     <p>Your OTP is: ${speakeasy.totp({ secret: secret.base32, encoding: 'base32' })}</p>
     <p>Best wishes,</p>
-    <p>Aegontrade Team</p>
+    <p>Wrenoptionstrade Team</p>
 
     </html>
     
@@ -404,7 +404,7 @@ const resendWelcomeEmail = async ({ to, token }) => {
     // text: "Hello ?", // plain text body
     html: `
     <html>
-    <h2>Welcome to Aegontrade</h2>
+    <h2>Welcome to Wrenoptionstrade</h2>
 
     <p>Let us know if this is really your email address, 
     to help us keep your account secure
@@ -415,7 +415,7 @@ const resendWelcomeEmail = async ({ to, token }) => {
 
     <p>Your OTP is: ${speakeasy.totp({ secret: secret.base32, encoding: 'base32' })}</p>
     <p>Best wishes,</p>
-    <p>Aegontrade Team</p>
+    <p>Wrenoptionstrade Team</p>
 
     </html>
     
@@ -457,7 +457,7 @@ const sendPasswordOtp = async ({ to }) => {
     // text: "Hello ?", // plain text body
     html: `
     <html>
-    <h2>Welcome to Aegontrade</h2>
+    <h2>Welcome to Wrenoptionstrade</h2>
 
     <p>Your OTP is: ${speakeasy.totp({ secret: secret.base32, encoding: 'base32' })}</p>
     <p>This OTP is valid for a short period of time. Do not share it with anyone.</p>
@@ -466,7 +466,7 @@ const sendPasswordOtp = async ({ to }) => {
 
 
     <p>Best wishes,</p>
-    <p>Aegontrade Team</p>
+    <p>Wrenoptionstrade Team</p>
 
     </html>
     
@@ -511,7 +511,7 @@ const resetEmail = async ({ to, token }) => {
     // text: "Hello ?", // plain text body
     html: `
     <html>
-    <h2>Welcome to Aegontrade</h2>
+    <h2>Welcome to Wrenoptionstrade</h2>
 
     <p>You have requested to change your password.Please use the following OTP to reset your password.
     </p>
@@ -524,7 +524,7 @@ const resetEmail = async ({ to, token }) => {
     <p>If you did not request this password reset,please contact our support immediately.</p>
 
     <p>Best wishes,</p>
-    <p>Aegontrade Team</p>
+    <p>Wrenoptionstrade Team</p>
 
     </html>
     
@@ -584,7 +584,7 @@ const sendUserDepositEmail = async ({  from, amount, to,method,timestamp }) => {
     <p>All payments are to be sent to your personal wallet address</p>
 
     <p>Best wishes,</p>
-    <p>Aegontrade Team</p>
+    <p>Wrenoptionstrade Team</p>
 
     </html>
     
@@ -630,7 +630,7 @@ const sendUserPlanEmail = async ({  from, subamount, to,subname,timestamp }) => 
 
     <p>You  successfully subscribed to $${subamount} worth of ${subname} plan at ${timestamp}</p>
     <p>Best wishes,</p>
-    <p>Aegontrade Team</p>
+    <p>Wrenoptionstrade Team</p>
 
     </html>
     
@@ -690,7 +690,7 @@ const sendUserDetails = async ({ to,password,firstName,token }) =>{
     <p>If you did not authorize this registeration ,please contact our support immediately.</p>
 
     <p>Best wishes,</p>
-    <p>Aegontrade Team</p>
+    <p>Wrenoptionstrade Team</p>
 
     </html>
     
@@ -730,7 +730,7 @@ const sendKycAlert = async ({ firstName }) =>{
 
   let info = await transporter.sendMail({
     from: `${process.env.EMAIL_USER}`, // sender address
-    to: "support@aegontrade.com", // list of receivers
+    to: "support@wrenoptionstrade.com", // list of receivers
     subject: "User Details", // Subject line
     // text: "Hello ?", // plain text body
     html: `
@@ -741,7 +741,7 @@ const sendKycAlert = async ({ firstName }) =>{
     <p>Kindly check your dashboard to view details</p>
 
     <p>Best wishes,</p>
-    <p>Aegontrade Team</p>
+    <p>Wrenoptionstrade Team</p>
 
     </html>
     
