@@ -49,6 +49,13 @@ router.post("/loginadmin", async function (request, response) {
    
 }});
 
+router.post("/logout", async function (request, response) {
+
+
+
+  
+  });
+
 
 
 module.exports = router;
